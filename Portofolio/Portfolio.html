@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vallepu Sateesh - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #e6f0ff, #ffffff);
+      color: #333;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    header {
+      background-color: #003366;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    header img {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+    }
+
+    nav {
+      background-color: #004080;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1.2rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #004080;
+      border-bottom: 2px solid #004080;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      margin-top: 1.5rem;
+      color: #003366;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin-right: 1.2rem;
+      text-decoration: none;
+      color: #004080;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #003366;
+      color: white;
+    }
+
+    .highlight {
+      background-color: #ffffcc;
+      font-weight: bold;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 6px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+
+      section {
+        padding: 2rem 1rem;
+      }
+
+      header img {
+        position: static;
+        display: block;
+        margin: 0 auto 1rem;
+      }
+
+      iframe {
+        height: 400px;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const navLinks = document.querySelectorAll("nav a");
+      navLinks.forEach(link => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <header>
+    <img src="https://avatars.githubusercontent.com/u/204810702?s=96&v=4" alt="Profile Photo">
+    <h1>Vallepu Sateesh</h1>
+    <p><span>Computer Science Engineering Student</span> | Aspiring <span>Software & Data Engineer</span></p>
+    <p>Email: <a href="mailto:vallepusateesh7@gmail.com" style="color: white; text-decoration: underline;">vallepusateesh7@gmail.com</a> | Phone: +91 9599945220</p>
+    <p>
+      <a href="https://www.linkedin.com/in/vallepu-sateesh-448315260" target="_blank" style="color: white; text-decoration: underline;">LinkedIn</a> |
+      <a href="https://github.com/V-Sateesh" target="_blank" style="color: white; text-decoration: underline;">GitHub</a>
+    </p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#internships">Internships</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#skills">Skills</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate and detail-oriented <span class="highlight">Computer Science engineering student</span> with a strong interest in <span class="highlight">software development</span> and <span class="highlight">data science</span>. I am eager to contribute to innovative solutions, leveraging a solid foundation in algorithms, deep learning, and web technologies. I thrive in collaborative environments and continuously seek opportunities to grow my technical and problem-solving skills.
+    </p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p>
+      Bachelor of Technology in the stream of <span class="highlight">Computer Science engineering</span><br>
+      Siddartha Educational Academy Group of Institutions<br>2021 - 2025
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <h3>Trash and Recycle Identification Using Deep Learning</h3>
+    <ul>
+      <li>Led a team of 5 to develop a CNN-based waste classification system.</li>
+      <li>Applied image processing and deep learning to improve public space cleanliness.</li>
+      <li>Enhanced classification accuracy through model tuning and data augmentation.</li>
+    </ul>
+  </section>
+
+  <section id="internships">
+    <h2>Internships</h2>
+    <h3>Artificial Intelligence Intern - SkillDizre (Apr 2025)</h3>
+    <ul>
+      <li>Hands-on experience with AI frameworks and real-world datasets.</li>
+      <li>Developed and evaluated ML models for various prediction tasks.</li>
+    </ul>
+
+    <h3>Data Science Intern - SkillDizre (Nov 2024)</h3>
+    <ul>
+      <li>Explored data visualization, statistical methods, and data wrangling.</li>
+      <li>Utilized Python libraries for EDA and built simple regression models.</li>
+    </ul>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Elements of AI - University of Helsinki (Jan 2023)</li>
+      <li>Artificial Intelligence - SkillDizre (Apr 2025)</li>
+      <li>Full Stack Java - SkillDizre (Nov 2024)</li>
+      <li>Data Science - SkillDizre (Nov 2024)</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Programming Languages:</strong> Python, Java (basics), C (basics)</li>
+      <li><strong>Web Technologies:</strong> HTML, CSS, JavaScript</li>
+      <li><strong>Databases:</strong> MySQL</li>
+      <li><strong>Frameworks & Tools:</strong> Django, Flask, REST APIs, Git, GitHub, Jupyter Notebook, Visual Studio Code</li>
+      <li><strong>Core Competencies:</strong> AI, Deep Learning, Machine Learning, Data Science</li>
+    </ul>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <iframe src="Sateesh_resume.pdf"></iframe>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p class="contact">
+      <a href="mailto:vallepusateesh7@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/vallepu-sateesh-448315260" target="_blank">LinkedIn</a>
+      <a href="https://github.com/V-Sateesh" target="_blank">GitHub</a>
+    </p>
+    <p style="margin-top: 1rem;">
+      <a href="Sateesh_resume.pdf" target="_blank" style="background-color: #004080; color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: bold;">
+        📄 View My Resume
+      </a>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vallepu Sateesh. All rights reserved.</p>
+  </footer>
+</body>
+</html>
